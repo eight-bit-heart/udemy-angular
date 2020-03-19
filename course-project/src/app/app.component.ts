@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course-project';
+  destination: string = 'recipes';
+
+  navClicked(destination: string){
+    this.destination = destination;
+  }
 }

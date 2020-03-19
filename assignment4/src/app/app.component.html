@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control (numberEmitted)='handleNumberEmitted($event)'></app-game-control>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <div *ngFor="let numberElement of numberElements">
+        <app-even *ngIf="numberElement.type === 'even'" [value]="numberElement.value"></app-even>
+        <app-odd *ngIf="numberElement.type === 'odd'" [value]="numberElement.value"></app-odd>
+      </div>
+    </div>
+  </div>
+</div>

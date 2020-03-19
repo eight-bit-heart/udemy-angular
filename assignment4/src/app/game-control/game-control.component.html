@@ -1,0 +1,8 @@
+<h1>Odd and Even Game</h1>
+<div>
+  <p>Game Status:
+    <span class="text-primary" *ngIf="gameRunning">Running</span>
+    <span class="text-danger" *ngIf="gameRunning === false">Stopped</span></p>
+  <button class="btn btn-primary" (click)="startGame()" [disabled]="gameRunning">Start Game</button>&nbsp;
+  <button class="btn btn-danger ml-3" (click)="stopGame()" [disabled]="gameRunning === false">Stop Game</button>
+</div>
