@@ -1,0 +1,6 @@
+label {
+  color: blue;
+}
+.form-control.ng-invalid.ng-touched.ng-dirty{
+  border: 1px solid red;
+}

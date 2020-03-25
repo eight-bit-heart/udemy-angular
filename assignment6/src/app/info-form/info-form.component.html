@@ -1,0 +1,42 @@
+<h2>Information Form - Assignment 6</h2>
+<form #infoForm="ngForm">
+
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email"
+           class="form-control"
+           id="email"
+           ngModel
+           name="email"
+           required
+           email>
+  </div>
+
+  <div class="form-group">
+    <label for="subscriptionType">Subscription</label>
+    <select class="form-control"
+            id="subscriptionType"
+            [ngModel]="subscriptionDefault"
+            name="subscriptionType"
+            >
+      <option *ngFor="let subscriptionOption of subscriptionOptions"
+              [value]="subscriptionOption"
+              >
+        {{ subscriptionOption }}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="text"
+           class="form-control"
+           id="password"
+           ngModel
+           name="password"
+           required>
+  </div>
+
+  <button class="btn btn-primary" (click)="onSubmit()" [disabled]="infoForm.invalid">Submit</button>
+
+</form>
